@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface User {
   id: string;
   name: string;
@@ -25,6 +27,7 @@ export interface CartItem {
 }
 
 export interface Order {
+  address: ReactNode;
   _id: string;
   user: string;
   products: Array<{
