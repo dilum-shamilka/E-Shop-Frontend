@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, ShoppingBag } from 'lucide-react';
+import { CheckCircle, ArrowRight, ShoppingBag, FileText } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
 import Confetti from 'react-confetti';
 
@@ -24,9 +24,9 @@ const PaymentSuccess: React.FC = () => {
         {orderId && (
           <div className="bg-blue-50/50 rounded-2xl p-4 mb-6 border border-blue-100/50 flex justify-between items-center text-sm">
             <span className="text-blue-500 font-bold tracking-wide uppercase text-xs">Order Ref</span>
-            <span className="font-mno font-bold text-blue-700 bg-white px-3 py-1 rounded-lg shadow-sm border border-blue-100">
+            <span className="font-mono font-bold text-blue-700 bg-white px-3 py-1 rounded-lg shadow-sm border border-blue-100">
               #{orderId.slice(-8).toUpperCase()}
-            </span>o
+            </span>
           </div>
         )}
 
@@ -35,6 +35,15 @@ const PaymentSuccess: React.FC = () => {
         </p>
 
         <div className="space-y-3">
+          {orderId && (
+            <Link 
+              to={`/orders/${orderId}`}
+              className="w-full bg-orange-500 text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors shadow-lg shadow-orange-200"
+            >
+              <FileText size={20} /> View Invoice
+            </Link>
+          )}
+
           <Link 
             to="/orders" 
             className="w-full bg-gray-950 text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-black transition-colors shadow-lg"

@@ -9,6 +9,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Orders from './pages/Orders';
 import OrderDetail from './pages/OrderDetail';
+import PaymentSuccess from './pages/PaymentSuccess';
 import Dashboard from './pages/Dashboard';
 import SellerManagement from './pages/SellerManagement';
 import NotFound from './pages/NotFound';
@@ -42,7 +43,7 @@ function App() {
           path="order-success"
           element={
             <ProtectedRoute>
-              <Orders /> {/* Order Success යොමු කරයි */}
+              <PaymentSuccess />
             </ProtectedRoute>
           }
         />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Package, Calendar, DollarSign, Truck, CheckCircle } from 'lucide-react';
+import { Package, Calendar, DollarSign, Truck, CheckCircle, FileText } from 'lucide-react';
 import type{ Order } from '../../types/types';
 import { formatCurrency } from '../../utils/formatters';
 import { useAuthStore } from '../../store/authStore';
@@ -144,9 +144,10 @@ const OrderCard: React.FC<OrderCardProps> = ({ order, onUpdate }) => {
             </button>
             <Link
               to={`/orders/${order._id}`}
-              className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition"
+              className="px-4 py-2 border border-orange-500 text-orange-600 rounded-lg hover:bg-orange-50 transition flex items-center gap-2 font-medium"
             >
-              View Details
+              <FileText className="h-4 w-4" />
+              View Invoice
             </Link>
           </div>
         </div>
