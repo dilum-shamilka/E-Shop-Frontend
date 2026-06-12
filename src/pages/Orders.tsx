@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { 
-  Package, Filter, Download, Search, 
+  Package, Filter, Search, 
   ShoppingBag, CheckCircle2, Truck, Clock, 
   ChevronDown, ExternalLink 
 } from 'lucide-react';

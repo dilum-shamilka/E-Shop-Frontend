@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Users, ShieldCheck, ShieldAlert, Loader2 } from 'lucide-react';
+import { Users, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const SellerManagement = () => {
@@ -34,7 +34,7 @@ const SellerManagement = () => {
     }
   };
 
-  if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin text-blue-600" size={40}/></div>;
+  if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin text-orange-500" size={40}/></div>;
 
   return (
     <div className="max-w-5xl mx-auto p-6">

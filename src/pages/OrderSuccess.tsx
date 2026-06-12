@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { CheckCircle, Package, Home, ShoppingBag } from 'lucide-react';
+import { CheckCircle, Package, ShoppingBag } from 'lucide-react';
 
 const OrderSuccess: React.FC = () => {
   const [searchParams] = useSearchParams();

@@ -1,17 +1,5 @@
 import api from './api';
-import type { Order } from '../types/types';
-
-export interface OrderAddress {
-  name: string;
-  address: Order;
-  email: string;
-  fullName: string;
-  phone: string;
-  street: string;
-  city: string;
-  postalCode: string;
-  country?: string;
-}
+import type { Order, OrderAddress } from '../types/types';
 
 export interface CreateOrderPayload {
   products: Array<{

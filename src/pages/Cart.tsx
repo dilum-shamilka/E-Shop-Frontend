@@ -1,6 +1,6 @@
-  import React from 'react';
-  import { Link } from 'react-router-dom';
-  import { Trash2, ShoppingBag, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Trash2, ShoppingBag } from 'lucide-react';
   import { useCartStore } from '../store/cartStore';
   import CartItem from '../components/cart/CartItem';
   import CartSummary from '../components/cart/CartSummary';

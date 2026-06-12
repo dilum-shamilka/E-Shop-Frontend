@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 
 export interface User {
   id: string;
@@ -26,16 +25,29 @@ export interface CartItem {
   quantity: number;
 }
 
+export interface OrderAddress {
+  fullName: string;
+  phone: string;
+  street: string;
+  city: string;
+  postalCode: string;
+  country?: string;
+}
+
 export interface Order {
-  address: ReactNode;
   _id: string;
-  user: string;
+  user: {
+    _id: string;
+    name: string;
+    email: string;
+  };
   products: Array<{
     product: Product;
     quantity: number;
   }>;
+  address: OrderAddress;
   total: number;
-  status: 'pending' | 'paid' | 'shipped' | 'delivered';
+  status: 'pending' | 'paid' | 'shipped' | 'delivered' | 'cancelled';
   createdAt: string;
 }
 

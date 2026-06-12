@@ -38,7 +38,7 @@ const OrderDetail: React.FC = () => {
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold text-gray-800">Order not found</h2>
-        <Link to="/orders" className="text-blue-600 hover:underline mt-4 inline-block">
+        <Link to="/orders" className="text-orange-600 hover:underline mt-4 inline-block">
           Return to Orders
         </Link>
       </div>
@@ -49,13 +49,13 @@ const OrderDetail: React.FC = () => {
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Header Actions (Hidden when printing) */}
       <div className="flex justify-between items-center mb-8 print:hidden">
-        <Link to="/orders" className="flex items-center text-blue-600 hover:text-blue-800 font-medium">
+        <Link to="/orders" className="flex items-center text-orange-600 hover:text-orange-700 font-medium">
           <ArrowLeft className="mr-2 h-5 w-5" />
           Back to Orders
         </Link>
         <button 
           onClick={() => window.print()}
-          className="flex items-center px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition shadow-sm"
+          className="flex items-center px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition shadow-sm"
         >
           <Printer className="mr-2 h-5 w-5" />
           Print Invoice
@@ -69,7 +69,7 @@ const OrderDetail: React.FC = () => {
         <div className="flex justify-between items-start border-b border-gray-100 pb-8 mb-8">
           <div>
             <h1 className="text-3xl font-black text-gray-900 flex items-center">
-              <ShoppingBag className="mr-3 h-8 w-8 text-blue-600" />
+              <ShoppingBag className="mr-3 h-8 w-8 text-orange-600" />
               INVOICE
             </h1>
             <p className="text-gray-500 mt-2 font-medium">E-Shop Retail Store</p>
@@ -87,16 +87,19 @@ const OrderDetail: React.FC = () => {
             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4 flex items-center">
               <MapPin className="mr-2 h-4 w-4" /> Billed To
             </h3>
-            <p className="font-bold text-gray-900">{order.user?.name || 'Customer'}</p>
-            <p className="text-gray-600">{order.user?.email || 'N/A'}</p>
-            <p className="text-gray-600 mt-2 whitespace-pre-line">{order.address}</p>
+            <p className="font-bold text-gray-900">{order.address?.fullName || order.user?.name || 'Customer'}</p>
+            <p className="text-gray-600">{order.address?.phone || ''}</p>
+            <p className="text-gray-600 mt-2">
+              {order.address?.street}<br />
+              {order.address?.city}, {order.address?.postalCode}
+            </p>
           </div>
           
           <div className="bg-gray-50 p-6 rounded-xl">
             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4 flex items-center">
               <Truck className="mr-2 h-4 w-4" /> Order Status
             </h3>
-            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-blue-100 text-blue-800 capitalize">
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-orange-100 text-orange-800 capitalize">
               {order.status}
             </span>
             <p className="text-gray-500 text-sm mt-4">
@@ -144,7 +147,7 @@ const OrderDetail: React.FC = () => {
               <span>Shipping</span>
               <span>Rs. 0.00</span>
             </div>
-            <div className="flex justify-between text-xl font-black text-blue-600 pt-3 border-t border-gray-100">
+            <div className="flex justify-between text-xl font-black text-orange-600 pt-3 border-t border-gray-100">
               <span>Total Amount</span>
               <span>Rs. {order.total.toFixed(2)}</span>
             </div>
