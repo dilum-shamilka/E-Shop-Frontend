@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3 text-slate-400">
                 <Mail className="h-5 w-5 text-orange-400 shrink-0" />
-                <span>support@eshop.com</span>
+                <span>eshop@gmail.com</span>
               </li>
             </ul>
             
@@ -147,9 +147,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 text-slate-400">
               <CreditCard className="h-8 w-8" />
               <div className="h-6 w-[1px] bg-white/10"></div>
-              <span className="text-xs font-bold tracking-widest uppercase">Visa</span>
-              <span className="text-xs font-bold tracking-widest uppercase">Mastercard</span>
-              <span className="text-xs font-bold tracking-widest uppercase">PayPal</span>
+              <span className="text-xs font-bold tracking-widest uppercase">COD</span>
+              
             </div>
           </div>
         </div>
