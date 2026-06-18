@@ -25,7 +25,7 @@ Payments: COD system
 Follow these steps to run the project locally:
 
 1️⃣ Clone the repository
-git clone
+git clone {https://github.com/dilum-shamilka/E-Shop-Frontend.git}
 cd E-Shop-Frontend
 npm install
 npm run dev 
